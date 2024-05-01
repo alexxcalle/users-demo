@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   const post1 = await prisma.users.upsert({
-    where: { id: 1 },
+    where: { name: 'Juan Perez' },
     update: {},
     create: {
       name: 'Juan Perez',
@@ -18,7 +18,7 @@ async function main() {
   });
 
   const post2 = await prisma.users.upsert({
-    where: { id: 2 },
+    where: { name: 'Pedro Messi' },
     update: {},
     create: {
       name: 'Pedro Messi',
